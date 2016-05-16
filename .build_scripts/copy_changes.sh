@@ -2,5 +2,5 @@
 
 mkdir "build"
 
-cp www/* build
+git diff-tree -r --no-commit-id --name-only --diff-filter=ACMRT HEAD www/ | xargs -I '{}' cp '{}' build
 
