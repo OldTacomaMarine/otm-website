@@ -15,16 +15,14 @@ body {
   margin-bottom: 2em;
 }
 
-.makes {
-  a {
-    margin-left: 1em;
-    margin-right: 1em;
-  }
+.makes a {
+  margin-left: 1em;
+  margin-right: 1em;
+}
 
-  img {
-    width: 120px;
-    height: 120px;
-  }
+.makes img {
+  width: 120px;
+  height: 120px;
 }
 
 
