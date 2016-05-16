@@ -1,3 +1,7 @@
+install: true
+
+script: true
+
 deploy:
   provider: s3
   access_key_id: AKIAJHPSCO2RFOBSJEZQ
@@ -8,5 +12,6 @@ deploy:
   detect_encoding: true
   cache_control: "no-cache,no-store"
   #cache_control: "max-age=300"
+  skip_cleanup: true
   on:
     repo: undefinedvalue/otm
