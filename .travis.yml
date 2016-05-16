@@ -12,10 +12,11 @@ deploy:
     bucket: oldtacomamarine.com
     acl: private
     detect_encoding: true
-    cache_control: "max-age=60"
+    cache_control: "max-age=600"
     skip_cleanup: true
     local_dir: build
     on:
+      branch: release
       repo: undefinedvalue/otm
 
   - provider: s3
@@ -27,6 +28,7 @@ deploy:
     detect_encoding: true
     cache_control: "no-cache,no-store"
     skip_cleanup: true
-    local_dir: build_no_cache
+    local_dir: build
     on:
+      branch: master
       repo: undefinedvalue/otm
