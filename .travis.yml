@@ -1,6 +1,6 @@
 install: true
 
-script: copy_changes.sh
+script: .build_scripts/copy_changes.sh
 
 deploy:
   - provider: s3
