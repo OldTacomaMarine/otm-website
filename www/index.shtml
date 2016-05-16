@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Old Tacoma Marine Inc</title>
+
+<link rel="stylesheet" media="all" type="text/css" href="css/global.css">
+<link rel="stylesheet" media="all" type="text/css" href="css/index.css">
+<link rel="stylesheet" media="all" type="text/css" href="css/flyout_h.css">
+
+<!--[if lte IE 6]>
+<link rel="stylesheet" media="all" type="text/css" href="css/flyout_h_ie.css">
+<![endif]-->
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="branding"><a href="index.shtml">Old Tacoma Marine, Inc.</a></div>
+	<div class="address1">902 NW Leary Way <br> Seattle, Washington 98107 </div>
+	<div class="address2">(206) 898-7012 <a href="mailto:adrian@oldtacomamarine.com">leadmechanic@oldtacomamarine.com</a></div>
+	<div class="invoice">Invoice <span class="red"><!--#exec cgi="/cgi-bin/counter/count.cgi?page=main&reloads=1"--></span><br> 
+		<script language="JavaScript">
+		<!--
+		var current_date = new Date ( );
+
+		var month_names = new Array ( );
+		month_names[month_names.length] = "January";
+		month_names[month_names.length] = "February";
+		month_names[month_names.length] = "March";
+		month_names[month_names.length] = "April";
+		month_names[month_names.length] = "May";
+		month_names[month_names.length] = "June";
+		month_names[month_names.length] = "July";
+		month_names[month_names.length] = "August";
+		month_names[month_names.length] = "September";
+		month_names[month_names.length] = "October";
+		month_names[month_names.length] = "November";
+		month_names[month_names.length] = "December";
+
+		document.write ( month_names[current_date.getMonth()] );
+		document.write ( " " + current_date.getDate() );
+		document.write ( "," );
+		document.write ( " " + current_date.getFullYear() );
+		// -->
+		</script>
+	</div>
+	<div class="menu">
+	<ul>
+		<li><a href="atlas/specs.html">Atlas-Imperial</a>
+			<!--[if lte IE 6]><a href="atlas/specs.html">Atlas-Imperial<table><tr><td><![endif]-->
+			<ul>
+				<li><a href="atlas/specs.html">browse engines</a></li>
+				<hr class="short">
+	 	    	<li><a href="atlas/index.html">manufacturer history</a></li>
+				<hr class="short">
+				<li><a href="http://maps.google.com/maps/ms?ie=UTF8&hl=en&om=1&msa=0&msid=105103426574378662388.00043ae6dce7a83e0fcc6&z=2">map of engines</a></li>
+				<hr class="short">
+				<li><a href="atlas/manual.html">original manuals</a></li>
+				<hr class="short">
+				<li><a href="http://www.youtube.com/results?search_query=atlas-imperial-otm&search=tag">video clips</a></li>
+				<hr class="short">
+				<li><a href="http://www.flickr.com/photos/oldtacomamarine/collections/72157604717240815/">photographs</a></li>
+			</ul>
+			<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		<hr class="long">
+		<li><a href="washington/specs.html">Washington Iron Works</a>
+			<!--[if lte IE 6]><a href="washington/specs.html">Washington Iron Works<table><tr><td><![endif]-->
+			<ul>
+				<li><a href="washington/specs.html">browse engines</a></li>
+				<hr class="short">
+				<li><a href="washington/index.html">manufacturer history</a></li>
+				<hr class="short">
+				<li><a href="http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=105103426574378662388.00043ae559485192e6bdf&z=3&om=1">map of engines</a></li>
+				<hr class="short">
+				<li><a href="washington/manual.html">original manuals</a></li>
+				<hr class="short">
+				<li><a href="http://www.youtube.com/results?search_query=wiw-otm&search=tag">video clips</a></li>
+				<hr class="short">
+				<li><a href="http://www.flickr.com/photos/oldtacomamarine/collections/72157604716943709/">photographs</a></li>
+			</ul>
+			<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		<hr class="long">
+		<li><a href="fairbanks/specs.html">Fairbanks-Morse</a>
+			<!--[if lte IE 6]><a href="fairbanks/specs.html">Fairbanks-Morse<table><tr><td><![endif]-->
+			<ul>
+				<li><a href="fairbanks/specs.html">browse engines</a></li>
+				<hr class="short">
+        		<li><a href="fairbanks/index.html">manufacturer history</a></li>
+				<hr class="short">
+				<li><a href="http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=105103426574378662388.000445f9aa7ffb4d46fcf&t=h&z=3">map of engines</a></li>
+				<hr class="short">
+				<li><a href="fairbanks/manual.html">original manuals</a></li>
+				<hr class="short">
+				<li><a href="http://www.youtube.com/results?search_query=fairbanks-morse-otm&search=tag">video clips</a></li>
+				<hr class="short">
+				<li><a href="http://www.flickr.com/photos/oldtacomamarine/collections/72157613613691404/">photographs</a></li>
+			</ul>
+			<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		<hr class="long">
+		<li><a href="enterprise/specs.html">Enterprise</a>
+			<!--[if lte IE 6]><a href="enterprise/specs.html">Enterprise<table><tr><td><![endif]-->
+			<ul>
+				<li><a href="enterprise/specs.html">browse engines</a></li>
+				<hr class="short">
+				<li><a href="enterprise/index.html">manufacturer history</a></li>
+				<hr class="short">
+				<li><a href="http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=105103426574378662388.0004447f6a06f8749552f&ll=41.574361,-99.492187&spn=29.168477,59.765625&t=h&z=4">map of engines</a></li>
+				<hr class="short">
+				<li><a href="enterprise/manual.html">original manuals</a></li>
+				<hr class="short">
+				<li><a href="http://www.youtube.com/results?search_query=enterprise-otm&search=tag">video clips</a></li>
+				<hr class="short">
+		 		<li><a href="http://www.flickr.com/photos/oldtacomamarine/collections/72157604716934209/">photographs</a></li>
+			</ul>
+			<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		<hr class="long">
+		<li><a href="#">Parts</a>
+			<!--[if lte IE 6]><a href="#">Parts<table><tr><td><![endif]-->
+			<ul>
+				<li><a href="suppliers.html">Suppliers</a></li>
+				<hr class="short">
+				<li><a href="manuals.html">Manuals</a></li>
+				<hr class="short">
+				<li><a href="forsale.html">Engines for Sale</a></li>
+				<hr class="short">
+			</ul>
+			<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		<hr class="long">
+		<li><a href="#">Labor</a>
+			<!--[if lte IE 6]><a href="#">Labor<table><tr><td><![endif]-->
+			<ul>
+				<li><a href="suppliers2.html">Suppliers</a></li>
+				<hr class="short">
+				<li><a href="news.html">What's New at OTM Inc</a></li>
+				<hr class="short">
+				<li><a href="about.html">About OTM Inc</a></li>
+				<hr class="short">
+				<li><a href="services.html">OTM Inc Services</a></li>
+				<hr class="short">
+				<li><a href="calendar.html">OTM Inc Calendar</a></li>
+				<hr class="short">
+				<li><a href="blogs/index.html">OTM Inc Blog</a></li>
+				<hr class="short">
+				<li><a href="ontheweb.html">OTM Inc On The Web</a></li>
+			</ul>
+			<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		<hr class="long">
+		<li><a href="#">Miscellaneous</a>
+			<!--[if lte IE 6]><a href="../menu/index.html">DEMOS<table><tr><td><![endif]-->
+			<ul>
+				<li><a href="other/index.html">Other Engines</a></li>
+				<hr class="short">
+				<li><a href="http://www.websitetoolbox.com/mb/oldtacomamarine/">Discussion Board</a></li>
+				<hr class="short">
+				<li><a href="links.html">Links</a></li>
+			</ul>
+			<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		</li>
+		<hr class="long">
+	</ul>
+</div>
+
+	<div class="totals">	
+		Subtotal __________<br> 
+		Tax (9.5%) ________<br>
+		Total _____________
+	</div>
+  </div>
+	<div class="icons"> 
+    	<a href="http://www.websitetoolbox.com/mb/oldtacomamarine/"><img src="images/icon_otm.gif" border="0" alt="Old Tacoma Marine Inc Discussion Board"></a>
+    	<a href="http://www.paypal.com"><img src="images/icon_paypal.gif" border="0" alt="Old Tacoma Marine Inc on PayPal"></a>
+		<a href="http://www.flickr.com/photos/oldtacomamarine/"><img src="images/icon_flickr.gif" border="0" alt="Old Tacoma Marine Inc on Flickr"></a>
+		<a href="http://oldtacomamarine.wordpress.com"><img src="images/icon_wordpress.gif" border="0" alt="Old Tacoma Marine Inc on WordPress"></a>
+		<a href="http://www.youtube.com/user/oldtacomamarine"><img src="images/icon_youtube.gif" border="0" alt="Old Tacoma Marine Inc on YouTube"></a>
+		<a href="http://www.facebook.com/profile.php?id=617536969"><img src="images/icon_facebook.gif" border="0" alt="Old Tacoma Marine Inc on Facebook"></a>
+		<a href="http://www.theboaters.com/users/oldtacomamarine"><img src="images/icon_theboaters.gif" border="0" alt="Old Tacoma Marine Inc on TheBoaters"></a>
+		<a href="http://profiles.friendster.com/otminc"><img src="images/icon_friendster.gif" border="0" alt="Old Tacoma Marine Inc on Friendster"></a>
+		<a href="http://twitter.com/oldtacomamarine"><img src="images/icon_twitter.gif" border="0" alt="Old Tacoma Marine Inc on Twitter"></a>
+		<a href="http://www.myspace.com/oldtacomamarineinc"><img src="images/icon_myspace.gif" border="0" alt="Old Tacoma Marine Inc on Myspace"></a>
+		<a href="http://stores.ebay.com/oldtacomamarineinc_W0QQcolZ4QQdirZ1QQfsubZQ2d33QQftidZ2QQtZkm"><img src="images/icon_ebay.gif" border="0" alt="Old Tacoma Marine Inc's eBay store"></a>
+		<a href="http://s667.photobucket.com/albums/vv38/oldtacomamarine/"><img src="images/icon_photobucket.gif" border="0" alt="Old Tacoma Marine Inc on PhotoBucket"></a>
+		<a href="http://www.linkedin.com/pub/7/48b/86a"><img src="images/icon_linkedin.gif" border="0" alt="Old Tacoma Marine Inc on LinkedIn"></a>
+		<a href="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;om=1&amp;msa=0&amp;msid=105103426574378662388.00044859e32fdde4d82ee&amp;ll=30.448674,-87.539062&amp;spn=112.516857,226.40625&amp;t=h&amp;z=2"><img src="images/icon_googlemaps.gif" border="0" alt="Old Tacoma Marine Inc on GoogleMaps"></a>
+		<a href="https://dibspace.com/businesses/218-Old-Tacoma-Marine"><img src="images/icon_dibspace.gif" border="0" alt="Old Tacoma Marine Inc on DibSpace"></a>
+		<a href="http://friendfeed.com/otm"> <img src="images/icon_friendfeed.gif" border="0" alt="Old Tacoma Marine Inc on FriendFeed"></a>
+		<a href="http://foursquare.com/user/oldtacomamarine"> <img src="images/icon_4square.gif" border="0" alt="Old Tacoma Marine Inc on 4Square"></a>
+		<a href="skype.html"> <img src="images/icon_skype.gif" border="0" alt="Contact Old Tacoma Marine Inc with Skype"></a>
+		</div>
+
+</body>
+</html> 

@@ -1,0 +1,35 @@
+.maincontent {
+	width: 528px;
+	padding: 10px 44px 0 44px;
+}
+
+.subnavE {
+	font: bold 12px Verdana, Arial, sans-serif;
+	text-align: center;
+	padding: 10px 44px 25px 44px;
+}
+
+table.stats {
+	width: 425px;
+	margin-left: auto;
+	margin-right: auto;
+	background: transparent;
+	text-align: left;
+	font: 12px Verdana, Arial, sans-serif;
+}
+
+table.stats td {
+	height: 14px;
+	text-align: left;
+}
+
+
+/* Images
+-------------------------------------------*/
+
+.engine {
+ border: 0;
+ display: block;
+ margin-right: auto;
+ margin-left: auto; 
+}

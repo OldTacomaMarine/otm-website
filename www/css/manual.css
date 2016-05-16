@@ -1,0 +1,250 @@
+/*
+   Add the following to your CSS file should you wish the cursor to
+   "wait" while the script is processing the sort
+
+body.sort-active *
+        {
+        cursor:wait;
+        }
+*/
+
+html, body, form, fieldset, h1, h2, h3, h4, h5, h6, p, ul {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: url(../images/diamond_plate.jpg) repeat;
+	text-align: center;
+	font: 12px/20px Verdana, Helvetica, sans-serif;
+	color: #000;
+	margin: 10px 0;
+}
+/*
+   Add the following to your CSS file should you wish the cursor to
+   "wait" while the script is processing the sort
+
+body.sort-active *
+        {
+        cursor:wait;
+        }
+*/
+
+html, body, form, fieldset, h1, h2, h3, h4, h5, h6, p, ul {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: url(../images/diamond_plate.jpg) repeat;
+	text-align: center;
+	font: 12px/20px Verdana, Helvetica, sans-serif;
+	color: #000;
+	margin: 10px 0;
+}
+a {
+	color: #005FA5;
+	text-decoration: none;
+}
+
+p {
+	text-align: left;
+	margin: 10px 0 17px 0;
+}
+#small {
+	text-align: left;
+	font: 11px Verdana, Helvetica, sans-serif;
+	color: ##4f6b72;
+	margin: 20px 10px 20 10px ;
+}
+h1 {
+	text-align: center;
+	font: bold 20px Verdana, Arial, sans-serif;
+}
+h2 {
+	text-align: left;
+	font: bold 14px Verdana, Arial, sans-serif;
+}
+h3 {
+	text-align: center;
+	font: bold 12px Verdana, Arial, sans-serif;
+	margin: 5px 0 0 0;
+}
+
+#homeBg {
+	width: 616px;
+	height: 731px;
+	margin: 0 auto;
+	background: url(../images/bg_home.gif) no-repeat top;
+}
+#pageBg {
+	width: 700px;
+	background: #fff;
+	margin: 0 auto;
+	border: 1px solid #ddd;
+}
+#specsBg {
+	width: 1000px;
+	background: #fff;
+	margin: 0 auto;
+	border: 1px solid #ddd;
+}
+#branding {
+	width: 524px;
+	height: 70px;
+	margin: 0 auto;
+	background: url(../images/logo_new.gif) no-repeat bottom;
+}
+#branding a:link, #branding a:visited, #branding a:active {
+	display: block;
+	padding-top: 20px;
+	width: 524px;
+	height: 45px;
+	text-indent: -9999px;
+	outline: none;
+}
+#specsContent {
+	margin: 0 auto;
+	padding: 10px 10px 0 10px;
+}
+		
+#subnav {
+	font: bold 12px Verdana, Arial, sans-serif;
+	text-align: left;
+	padding: 10px 44px 25px 44px;
+}
+
+#center {
+	text-align: center;
+}
+
+#clear
+        {
+	font: 12px Verdana, Arial, sans-serif;
+	color: transparent;
+        }
+
+table
+        {
+        width: auto;
+        padding: 0;
+        margin: 0 auto 1.5em auto;
+        border-left: 1px solid #CCCCCC;
+        border-collapse:collapse;
+        }
+.cs1
+        {
+        width:30em;
+        }
+.cs2
+        {
+        width:20em;
+        }
+.cs1 td,
+.cs2 td,
+#scientificNotation
+        {
+        text-align:right;
+        }
+th
+        {
+        font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+        color: #4f6b72;
+        border-right: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        border-top: 1px solid #CCCCCC;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 1px 1px 1px 1px;
+        background: #ddd;
+        vertical-align:middle;
+        }
+td.total
+        {
+        border-top: 0;
+        border-left: 0;
+        border-right: 1px solid #CCCCCC;
+        background: none;
+        text-align:right;
+        font-weight:bold;
+        text-transform:uppercase;
+        letter-spacing:0px;
+        }
+th.sortable,
+th.sortable-text,
+th.sortable-date,
+th.sortable-keep,
+th.sortable-date-dmy,
+th.sortable-numeric,
+th.sortable-currency,
+th.sortable-sortByTwelveHourTimestamp,
+th.sortable-sortIPAddress,
+th.sortable-sortEnglishLonghandDateFormat,
+th.sortable-sortScientificNotation,
+th.sortable-sortImage,
+th.sortable-sortFileSize,
+th.sortable-sortAlphaNumeric,
+th.sortable-sortEnglishDateTime
+
+        {
+        cursor:pointer;
+        background: #DBDBDB;
+        padding: 8px 12px 4px 16px;
+        }
+th.forwardSort
+        {
+        background:#EBEBEB 0 0;
+        }
+th.reverseSort
+        {
+        background:#EBEBEB 0 0;
+        }
+table thead th.forwardSort a,
+table thead th.reverseSort a
+        {
+        color:#000000;
+        text-decoration:none;
+        }
+/*
+These styles should be added when very long tables are expected
+th.sort-active
+        {
+        background:#F2F2F2 0 0;
+        cursor:wait;
+        }
+th.sort-active a
+        {
+        color:#F2F2F2 !important;
+        cursor:wait;
+        }
+*/
+th a
+        {
+        text-decoration:none;
+        color: #4f6b72;
+        background:transparent;
+        }
+td a
+        {
+        text-decoration:none;
+        color:#005FA5;
+        background:transparent;
+        }
+td
+        {
+        font: normal 11px Verdana, Arial, Helvetica, sans-serif;
+        border-right: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        padding: 6px 12px 6px 12px;
+        color: #4f6b72;
+        text-align:left;
+        vertical-align:top;
+        }
+td.lft
+        {
+        text-align:left;
+        }
+tr.alt
+        {
+        background: #F2F2F2;
+        color: #4f6b72;
+        }
