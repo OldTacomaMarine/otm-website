@@ -1,17 +1,30 @@
 install: true
 
-script: true
+script: copy_changes.sh
 
 deploy:
-  provider: s3
-  access_key_id: AKIAJHPSCO2RFOBSJEZQ
-  secret_access_key:
-    secure: tco4CKrhOvw3srPjRTXBVDpQIDbZ9q1cC7lg76glaDr/u4l1QawCoMFfUs2NugosLz6LMz/SE2UIenjVLPlFBjEGvq9b//BOWnLvhZTO93A2s6OlqdK1uSlJybKA7Zy1pAHDKufzZ+T1XFIr/nmILrMEzKnx6cESclwSfoE9GInMOZAIdCgshiw4FPEYyczEKKDkTAbqBeAz0zI86T705L4ShWKFlHssFa+hEi3xcSKB3S1xHMt9cPnWAHp6yvLfkSWK+Pp94YTnS+4RbWDgNt+o+4EcU0j4BzpcEDro1f11FGsy2QEOO+WRxKY8o6B04WQC4AtzMEpYTM/2Zn4ijjLd1M/GAL43lPRcH49rkKbQTnH28BwpU8SdAzHHdNG4RjHwoUdmPijnDG8+2D4alJL6nUPiiLgJp6tEjn0kZGwfqInGUITJjxV1L9+xAwztXfkx0bluYHisMJXgM+XGW7vw6U7fOD57qW/fcEZIk2iJrJlC582wgtqDEY2s3UnzfZ0F9QJy00g6MzWwXzBkMfWcpszzV/adG3kw9UpQqgyLA8XEyu67yxMF0t/QbUJXrxYwFs0UPHXIf+TMwhS1aPaSe0h6nBrxFK8bwN+NhyN4Mg3v8IamF2ZG/Hd8hdi9doXwaaV4irAsrl3xq6JiCqneWAe69dbcqAv6ZHp2umM=
-  bucket: oldtacomamarine.com
-  acl: private
-  detect_encoding: true
-  cache_control: "no-cache,no-store"
-  #cache_control: "max-age=300"
-  skip_cleanup: true
-  on:
-    repo: undefinedvalue/otm
+  - provider: s3
+    access_key_id: AKIAJHPSCO2RFOBSJEZQ
+    secret_access_key:
+      secure: tco4CKrhOvw3srPjRTXBVDpQIDbZ9q1cC7lg76glaDr/u4l1QawCoMFfUs2NugosLz6LMz/SE2UIenjVLPlFBjEGvq9b//BOWnLvhZTO93A2s6OlqdK1uSlJybKA7Zy1pAHDKufzZ+T1XFIr/nmILrMEzKnx6cESclwSfoE9GInMOZAIdCgshiw4FPEYyczEKKDkTAbqBeAz0zI86T705L4ShWKFlHssFa+hEi3xcSKB3S1xHMt9cPnWAHp6yvLfkSWK+Pp94YTnS+4RbWDgNt+o+4EcU0j4BzpcEDro1f11FGsy2QEOO+WRxKY8o6B04WQC4AtzMEpYTM/2Zn4ijjLd1M/GAL43lPRcH49rkKbQTnH28BwpU8SdAzHHdNG4RjHwoUdmPijnDG8+2D4alJL6nUPiiLgJp6tEjn0kZGwfqInGUITJjxV1L9+xAwztXfkx0bluYHisMJXgM+XGW7vw6U7fOD57qW/fcEZIk2iJrJlC582wgtqDEY2s3UnzfZ0F9QJy00g6MzWwXzBkMfWcpszzV/adG3kw9UpQqgyLA8XEyu67yxMF0t/QbUJXrxYwFs0UPHXIf+TMwhS1aPaSe0h6nBrxFK8bwN+NhyN4Mg3v8IamF2ZG/Hd8hdi9doXwaaV4irAsrl3xq6JiCqneWAe69dbcqAv6ZHp2umM=
+    bucket: oldtacomamarine.com
+    acl: private
+    detect_encoding: true
+    cache_control: "max-age=60"
+    skip_cleanup: true
+    local_dir: build
+    on:
+      repo: undefinedvalue/otm
+
+  - provider: s3
+    access_key_id: AKIAJHPSCO2RFOBSJEZQ
+    secret_access_key:
+      secure: tco4CKrhOvw3srPjRTXBVDpQIDbZ9q1cC7lg76glaDr/u4l1QawCoMFfUs2NugosLz6LMz/SE2UIenjVLPlFBjEGvq9b//BOWnLvhZTO93A2s6OlqdK1uSlJybKA7Zy1pAHDKufzZ+T1XFIr/nmILrMEzKnx6cESclwSfoE9GInMOZAIdCgshiw4FPEYyczEKKDkTAbqBeAz0zI86T705L4ShWKFlHssFa+hEi3xcSKB3S1xHMt9cPnWAHp6yvLfkSWK+Pp94YTnS+4RbWDgNt+o+4EcU0j4BzpcEDro1f11FGsy2QEOO+WRxKY8o6B04WQC4AtzMEpYTM/2Zn4ijjLd1M/GAL43lPRcH49rkKbQTnH28BwpU8SdAzHHdNG4RjHwoUdmPijnDG8+2D4alJL6nUPiiLgJp6tEjn0kZGwfqInGUITJjxV1L9+xAwztXfkx0bluYHisMJXgM+XGW7vw6U7fOD57qW/fcEZIk2iJrJlC582wgtqDEY2s3UnzfZ0F9QJy00g6MzWwXzBkMfWcpszzV/adG3kw9UpQqgyLA8XEyu67yxMF0t/QbUJXrxYwFs0UPHXIf+TMwhS1aPaSe0h6nBrxFK8bwN+NhyN4Mg3v8IamF2ZG/Hd8hdi9doXwaaV4irAsrl3xq6JiCqneWAe69dbcqAv6ZHp2umM=
+    bucket: oldtacomamarine.com
+    acl: private
+    detect_encoding: true
+    cache_control: "no-cache,no-store"
+    skip_cleanup: true
+    local_dir: build_no_cache
+    on:
+      repo: undefinedvalue/otm
