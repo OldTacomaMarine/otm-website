@@ -1,3 +1,4 @@
+language: c
 install: true
 
 script: .build_scripts/copy_changes.sh
