@@ -21,4 +21,5 @@ for (filename, local_hash, path) in hashes:
 
   if s3_hash != local_hash:
     print "{} differs, uploading".format(path)
-    obj.upload_file(path, ExtraArgs={'Metadata': {'hash': local_hash}})
+    mime = check_output(['file', '-b', '--mime-type', path]).strip()
+    obj.upload_file(path, ExtraArgs={'ContentType': mime, 'Metadata': {'hash': local_hash}})
