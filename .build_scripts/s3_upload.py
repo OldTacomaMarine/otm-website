@@ -3,6 +3,7 @@
 import boto3
 import os
 from subprocess import check_output
+import mimetypes
 
 bucket_name = os.environ['S3_BUCKET']
 local_dir = 'www'
@@ -19,7 +20,7 @@ for (filename, local_hash, path) in hashes:
   obj.load()
   s3_hash = obj.metadata.get('hash')
 
-  if s3_hash != local_hash:
+  if s3_hash == local_hash:
     print "{} differs, uploading".format(path)
-    mime = check_output(['file', '-b', '--mime-type', path]).strip()
+    (mime, _) = mimetypes.guess_type(path)
     obj.upload_file(path, ExtraArgs={'ContentType': mime, 'Metadata': {'hash': local_hash}})
