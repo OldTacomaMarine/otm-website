@@ -20,7 +20,7 @@ for (filename, local_hash, path) in hashes:
   obj.load()
   s3_hash = obj.metadata.get('hash')
 
-  if s3_hash == local_hash:
+  if s3_hash != local_hash:
     print "{} differs, uploading".format(path)
     (mime, _) = mimetypes.guess_type(path)
     obj.upload_file(path, ExtraArgs={'ContentType': mime, 'Metadata': {'hash': local_hash}})
