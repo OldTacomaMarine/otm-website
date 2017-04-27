@@ -1,0 +1,3 @@
+[submodule ".statdev"]
+	path = .statdev
+	url = https://github.com/undefinedvalue/statdev.git

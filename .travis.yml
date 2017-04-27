@@ -1,8 +1,12 @@
 language: python
 python:
- - "2.7"
+  - "2.7"
+cache:
+  pip: true
+  directories:
+    - /home/travis/virtualenv/python2.7/lib/python2.7/site-packages
 
-install: pip install boto3
+install: pip install jinja2 libsass boto3 watchdog
 
-script: .build_scripts/s3_upload.py
+script: ".statdev/build.py build"
 
