@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  {% if environment == 'development' %}
+  <script src="/js/refresh.js"></script>
+  {% endif %}
+  {% block head scoped %}{% endblock %}
+  <title>Old Tacoma Marine</title>
+
+  <link rel="stylesheet" media="all" type="text/css" href="css/index.css">
+</head>
+<body>
+
+<div class="logo">OLD TACOMA MARINE</div>
+<div class="phone">(206) 898-7012</div>
+<div class="makes">
+<a href=""><img src="images/atlas_imperial_logo.png" alt="Atlas Imperial"/></a>
+<a href=""><img src="images/enterprise_logo.png" alt="Enterprise"/></a>
+<a href=""><img src="images/fairbanks_morse_logo.png" alt="Fairbanks Morse"/></a>
+<a href=""><img src="images/wiw_logo.png" alt="Washington Iron Works"/></a>
+</div>
+
+</body>
+</html>
