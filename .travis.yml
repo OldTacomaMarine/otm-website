@@ -6,7 +6,7 @@ cache:
   directories:
     - /home/travis/virtualenv/python2.7/lib/python2.7/site-packages
 
-install: pip install jinja2 libsass boto3 watchdog
+install: "pip install -r .statdev/requirements.txt"
 
 script: ".statdev/build.py build"
 
