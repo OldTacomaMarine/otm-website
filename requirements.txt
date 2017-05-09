@@ -1,0 +1,3 @@
+-r .statdev/requirements.txt
+
+beautifulsoup4
