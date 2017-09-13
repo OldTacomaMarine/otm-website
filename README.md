@@ -1,1 +1,1 @@
-[![BuildStatus](https://travis-ci.org/undefinedvalue/otm.svg)](https://travis-ci.org/undefinedvalue/otm)
+[![BuildStatus](https://travis-ci.org/OldTacomaMarine/otm-website.svg)](https://travis-ci.org/OldTacomaMarine/otm-website)
