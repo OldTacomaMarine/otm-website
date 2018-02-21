@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  {% if environment == 'development' %}
+  <script src="/js/refresh.js"></script>
+  {% endif %}
+  {% block head scoped %}{% endblock %}
+</head>
+<body>
+  {% block body scoped %}{% endblock %}
+</body>
+</html>
