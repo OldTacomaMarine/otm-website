@@ -2,20 +2,25 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 const table = document.querySelector('table.sortable');
+
+if (!table) {
+  return;
+}
+
 const headers = table.querySelectorAll('th');
 const rows = Array.from(document.querySelectorAll('tr'));
 
 let currSortCol = null;
 let order = 1; // 1=asc, -1=desc
 
-for(let i = 0; i < headers.length; i++) {
+for (let i = 0; i < headers.length; i++) {
   const isNum = headers[i].classList.contains('numeric');
   headers[i].onclick = function() { sortCol(i + 1, isNum); };
 }
 
 function sortCol(col, isNum) {
   // Track indexes to make the sort stable and allow sorting on multiple rows
-  for(let i = 0; i < rows.length; i++) {
+  for (let i = 0; i < rows.length; i++) {
     rows[i].lastIndex = i;
   }
 

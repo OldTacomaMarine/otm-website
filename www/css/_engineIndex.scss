@@ -1,0 +1,59 @@
+#engine-index {
+  background: #FFFFFF;
+  margin: 0 1em;
+  font-size: 0.9rem;
+
+  .content {
+    padding: 10px 10px 0 10px;
+    border: 1px solid #DDDDDD;
+    border-top: none;
+  }
+
+  .table-info {
+    font-size: 0.75em;
+    margin-bottom: 1em;
+  }
+
+  table {
+    width: auto;
+    padding: 0;
+    margin: 0 auto 1.5em auto;
+    border-collapse: collapse;
+    color: #4F6B72;
+    font-size: 0.8em;
+  }
+
+  tr {
+    height: 3em;
+
+    &:nth-of-type(odd) {
+      background: #F2F2F2;
+    }
+  }
+
+  th, td {
+    padding: 0 1em;
+    border: 1px solid #CCCCCC;
+  }
+
+  th {
+    background: #DBDBDB;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  .vessel {
+    font-style: italic;
+  }
+
+  .display-prior {
+    text-decoration: line-through;
+  }
+
+  td {
+    &.model, &.serial, &.engine {
+      white-space: nowrap;
+    }
+  }
+}
