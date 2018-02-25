@@ -1,7 +1,0 @@
-[submodule ".statdev"]
-	path = .statdev
-	url = https://github.com/undefinedvalue/statdev.git
-  branch = master
-[submodule "lib/normalize.css"]
-	path = lib/normalize.css
-	url = https://github.com/necolas/normalize.css.git
