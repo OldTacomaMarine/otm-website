@@ -1,5 +1,0 @@
-language: ruby
-rvm:
-  - 2.3
-script: jekyll build
-sudo: false

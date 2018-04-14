@@ -1,7 +1,7 @@
 collections:
   engines:
     output: true
-exclude: [vendor]
+exclude: [README.md, Gemfile, Gemfile.lock, buildspec.yml, old_engines]
 defaults:
   -
     scope:
