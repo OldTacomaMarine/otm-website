@@ -1,12 +1,5 @@
 language: ruby
 rvm:
-  - 2.5
-cache:
-  pip: true
-  directories:
-    - /home/travis/virtualenv/python2.7/lib/python2.7/site-packages
-
-install: "pip install -r requirements.txt"
-
+  - 2.3
 script: jekyll build
 sudo: false
