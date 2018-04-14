@@ -10,12 +10,29 @@ if (!table) {
 const headers = table.querySelectorAll('th');
 const rows = Array.from(document.querySelectorAll('tr'));
 
+const descArrow = '<span class="sort-arrow">&darr;</span>';
+const ascArrow = '<span class="sort-arrow">&uarr;</span>';
+
 let currSortCol = null;
-let order = 1; // 1=asc, -1=desc
+let order = -1; // 1=asc, -1=desc
 
 for (let i = 0; i < headers.length; i++) {
   const isNum = headers[i].classList.contains('numeric');
-  headers[i].onclick = function() { sortCol(i + 1, isNum); };
+  headers[i].onclick = function() { sortCol(i, isNum); };
+
+  if (i == 0) {
+    headers[0].onclick()
+  }
+}
+
+function getValue(row, col, isNum) {
+  const el = row.querySelector('td:nth-of-type(' + (col + 1) + ')');
+  let val = el.getAttribute('data-sort-val');
+
+  val = (val ? val : el.innerText);
+  val = val.toUpperCase()
+
+  return (isNum ? parseFloat(val) : val);
 }
 
 function sortCol(col, isNum) {
@@ -24,7 +41,14 @@ function sortCol(col, isNum) {
     rows[i].lastIndex = i;
   }
 
-  order = ((col == currSortCol) ? -order : order);
+  order = ((col == currSortCol) ? -order : -1);
+
+  if (currSortCol != null) {
+    const arr = headers[currSortCol].querySelector('.sort-arrow');
+    headers[currSortCol].removeChild(arr);
+  }
+
+  headers[col].innerHTML += (order < 0 ? descArrow : ascArrow);
 
   rows.sort(function(rowA, rowB) {
     // Keep the header row first
@@ -34,14 +58,8 @@ function sortCol(col, isNum) {
       return 1;
     }
 
-    const q = 'td:nth-of-type(' + col + ')';
-    let a = rowA.querySelector(q).innerText.toUpperCase();
-    let b = rowB.querySelector(q).innerText.toUpperCase();
-
-    if (isNum) {
-      a = parseFloat(a);
-      b = parseFloat(b);
-    }
+    const a = getValue(rowA, col);
+    const b = getValue(rowB, col);
 
     // Order such that empty strings always come last
     if (a === b) {

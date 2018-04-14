@@ -1,0 +1,12 @@
+collections:
+  engines:
+    output: true
+exclude: [vendor]
+defaults:
+  -
+    scope:
+      path: ""
+      type: engines
+    values:
+      layout: engine
+

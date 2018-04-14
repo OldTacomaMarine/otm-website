@@ -1,0 +1,60 @@
+#engine-index {
+  .table-info {
+    font-size: 0.75em;
+    margin-bottom: 1em;
+  }
+
+  table {
+    width: auto;
+    padding: 0;
+    margin: 0 auto 1.5em auto;
+    border-collapse: collapse;
+    color: #4F6B72;
+    font-size: 0.8em;
+  }
+
+  tr {
+    height: 3em;
+
+    &:nth-of-type(odd) {
+      background: #F2F2F2;
+    }
+  }
+
+  th, td {
+    padding: 0 1em;
+    border: 1px solid #CCCCCC;
+  }
+
+  th {
+    position: relative; /* For sort-arrow positioning */
+    background: #DBDBDB;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+
+    .sort-arrow {
+      position: absolute;
+      right: 0.1em;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      font-size: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  .vessel {
+    font-style: italic;
+  }
+
+  .display-prior {
+    text-decoration: line-through;
+  }
+
+  td {
+    &.model, &.serial {
+      white-space: nowrap;
+    }
+  }
+}

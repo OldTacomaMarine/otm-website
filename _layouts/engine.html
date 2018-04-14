@@ -1,0 +1,35 @@
+---
+title: Old Tacoma Marine
+layout: root
+pageType: engine-info
+---
+{%- assign engine_title = page.title -%}
+{%- if page.vessel -%}
+  {%- capture vessel -%}<span class="vessel">{{ page.vessel }}</span>{%- endcapture -%}
+  {%- capture engine_title -%}{{ page.title | replace: page.vessel, vessel }}{%- endcapture -%}
+{%- endif -%}
+<h1>{{ engine_title }}</h1>
+{% if page.images.small -%}
+  {%- if page.images.big -%}
+  <a href="{{ page.images.big }}"><img src="{{ page.images.small }}"></a>
+  {%- else -%}
+  <img src="{{ page.images.small }}">
+  {%- endif -%}
+{%- endif %}
+
+<table>
+  <tr><th>Model:</th><td>{{ page.model }}</td></tr>
+  <tr><th>Serial:</th><td>{{ page.serial }}</td></tr>
+  <tr><th>Bore:</th><td>{{ page.bore | fractionize }}"</td></tr>
+  <tr><th>Stroke:</th><td>{{ page.stroke | fractionize }}"</td></tr>
+  <tr><th>Cylinders:</th><td>{{ page.cylinders }}</td></tr>
+  <tr><th>Horsepower:</th><td>{{ page.hp }}</td></tr>
+  <tr><th>RPM:</th><td>{{ page.rpm }}</td></tr>
+  <tr><th>Current Owner:</th><td>{{ page.owner }}</td></tr>
+  <tr><th>Current Location:</th><td>{{ page.location }}</td></tr>
+  <tr><th>Current Condition:</th><td>{{ page.condition }}</td></tr>
+</table>
+
+<h2>Engine History</h2>
+{{ content }}
+

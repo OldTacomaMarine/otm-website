@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>{{ page.title }}{% if layout.title %} - {{ layout.title }}{% endif %}</title>
+
+  <link rel="stylesheet" media="all" type="text/css" href="/css/otm.css">
+  <script type="text/javascript" src="/js/tablesort.js"></script>
+</head>
+<body id="{% if page.pageType %}{{ page.pageType }}{% else %}{{ layout.pageType }}{% endif %}">
+  <header class="logo"><a href="/">Old Tacoma Marine</a></header>
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>

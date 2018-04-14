@@ -1,0 +1,66 @@
+---
+title: Old Tacoma Marine
+layout: root
+pageType: engine-index
+---
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+<h3>Known Remaining engines</h3>
+
+<div class="table-info">
+  Click on the headings to sort table by column. Names
+  <span class="display-prior">struck out</span> designate an engine's
+  original provenance prior to removal for display.
+</div>
+
+<table class="sortable">
+  <tr>
+    <th>Model</th>
+    <th>Serial</th>
+    <th>Engine</th>
+    <th class="numeric">Bore</th>
+    <th class="numeric">Stroke</th>
+    <th class="numeric">Cyl</th>
+    <th class="numeric">HP</th>
+    <th class="numeric">RPM</th>
+    <th>Owner</th>
+    <th>Originally</th>
+    <th>Currently</th>
+    <th>Location</th>
+  </tr>
+  {%- assign engines = site.engines | where: "type", page.engine_type -%}
+  {%- for engine in engines -%}
+  {%- capture display_prior -%}{% if engine.is_display %} display-prior{% endif %}{%- endcapture -%}
+  {%- assign engine_title = engine.title -%}
+  {%- if engine.vessel -%}
+    {%- capture vessel -%}<span class="vessel">{{ engine.vessel }}</span>{%- endcapture -%}
+    {%- capture engine_title -%}{{ engine.title | replace: engine.vessel, vessel }}{%- endcapture -%}
+  {%- endif -%}
+  {%- if engine.bore -%}
+    {%- capture bore -%}{{ engine.bore | fractionize }}"{%- endcapture -%}
+    {%- capture bore_sort -%}data-sort-val=""{%- endcapture -%}
+  {%- endif -%}
+  {%- if engine.stroke -%}
+    {%- capture stroke -%}{{ engine.stroke | fractionize }}"{%- endcapture -%}
+    {%- capture stroke_sort -%}data-sort-val=""{%- endcapture -%}
+  {%- endif -%}
+  {%- capture location -%}{{ engine.location | abbr }}{%- endcapture -%}
+  <tr>
+    <td class="model">{{ engine.model }}</td>
+    <td class="serial">{{ engine.serial }}</td>
+    <td class="engine{{ display_prior }}"><a href="{{ engine.url }}">{{ engine_title }}</a></td>
+    <td class="bore"{{ bore_sort }}>{{ bore }}</td>
+    <td class="stroke"{{ stroke_sort }}>{{ stroke }}</td>
+    <td class="cylinders">{{ engine.cylinders }}</td>
+    <td class="hp">{{ engine.hp }}</td>
+    <td class="rpm">{{ engine.rpm }}</td>
+    <td class="owner">{{ engine.owner }}</td>
+    <td class="origin">{{ engine.original_use }}</td>
+    <td class="current">{{ engine.current_use }}</td>
+    <td class="location">{% if engine.map %}<a href="{{ engine.map }}">{{ location }}</a>{% else %}{{ location }}{% endif %}</td>
+  </tr>
+  {%- endfor -%}
+</table>
+
