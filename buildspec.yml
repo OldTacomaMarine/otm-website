@@ -7,5 +7,5 @@ phases:
       - jekyll build
 artifacts:
   files:
-    - **/*
+    - "**/*"
   base-directory: _site
