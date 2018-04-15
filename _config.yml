@@ -1,7 +1,7 @@
 collections:
   engines:
     output: true
-exclude: [vendor]
+exclude: [vendor, Gemfile*, README.md, deploy.rb, old_engines, images/unused]
 defaults:
   -
     scope:
