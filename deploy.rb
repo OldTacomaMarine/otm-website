@@ -1,6 +1,7 @@
 require 'digest'
 require 'pathname'
-require 'aws-sdk'
+require 'aws-sdk-s3'
+require 'aws-sdk-cloudfront'
 require 'mime-types'
 
 s3 = Aws::S3::Resource.new
