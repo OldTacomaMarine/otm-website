@@ -1,5 +1,5 @@
 language: ruby
 rvm:
   - 2.3
-script: jekyll build && ruby deploy.rb
+script: bundle exec jekyll build && bundle exec htmlproofer ./_site && bundle exec ruby deploy.rb
 sudo: false

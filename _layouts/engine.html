@@ -11,9 +11,9 @@ pageType: engine-info
 <h1>{{ engine_title }}</h1>
 {% if page.images.small -%}
   {%- if page.images.big -%}
-  <a href="{{ page.images.big }}"><img src="{{ page.images.small }}"></a>
+  <a href="{{ page.images.big }}"><img src="{{ page.images.small }}" alt="{{ page.title }}"></a>
   {%- else -%}
-  <img src="{{ page.images.small }}">
+  <img src="{{ page.images.small }}" alt="{{ page.title }}">
   {%- endif -%}
 {%- endif %}
 

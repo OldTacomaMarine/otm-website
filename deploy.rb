@@ -9,6 +9,9 @@ s3 = Aws::S3::Resource.new
 bucket = s3.bucket(ENV["S3_BUCKET"])
 build_dir = Pathname.new(ENV["BUILD_DIR"])
 
+puts "Uploading changed files..."
+changed = false
+
 # Find all files recursively within the build output directory
 files = Pathname.glob(File.join(build_dir, "**/*")).lazy.select(&:file?)
 files.each do |f|
@@ -27,6 +30,8 @@ files.each do |f|
 
   # Upload the file if it is different from the existing one
   unless exists && obj.metadata["hash"] == local_hash
+    changed = true
+
     if exists
       puts "#{key} differs...uploading"
     else
@@ -45,13 +50,20 @@ files.each do |f|
   end
 end
 
+puts "No files changed" unless changed
+
 # Invalidate cloudfront
-cf = Aws::CloudFront::Client.new
-cf.create_invalidation(
-  distribution_id: ENV["CF_DIST_ID"],
-  invalidation_batch: {
-    paths: { quantity: 1, items: ["/*"] },
-    caller_reference: Time.now.utc.to_s
-  }
-)
+if changed
+  puts "Invalidating CDN"
+  cf = Aws::CloudFront::Client.new
+  cf.create_invalidation(
+    distribution_id: ENV["CF_DIST_ID"],
+    invalidation_batch: {
+      paths: { quantity: 1, items: ["/*"] },
+      caller_reference: Time.now.utc.to_s
+    }
+  )
+end
+
+puts "Deployment complete"
 
