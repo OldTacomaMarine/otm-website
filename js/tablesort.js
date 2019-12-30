@@ -58,8 +58,8 @@ function sortCol(col, isNum) {
       return 1;
     }
 
-    const a = getValue(rowA, col);
-    const b = getValue(rowB, col);
+    const a = getValue(rowA, col, isNum);
+    const b = getValue(rowB, col, isNum);
 
     // Order such that empty strings always come last
     if (a === b) {

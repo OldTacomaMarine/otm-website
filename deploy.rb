@@ -39,6 +39,7 @@ files.each do |f|
       puts "#{key} doesn't exist...uploading"
     end
 
+    puts key
     mime = MIME::Types.type_for(f.to_s).first.content_type
 
     File.open(f, "r") do |file|

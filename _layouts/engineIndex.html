@@ -40,11 +40,11 @@ pageType: engine-index
   {%- endif -%}
   {%- if engine.bore -%}
     {%- capture bore -%}{{ engine.bore | fractionize }}"{%- endcapture -%}
-    {%- capture bore_sort -%}data-sort-val=""{%- endcapture -%}
+    {%- capture bore_sort -%}data-sort-val="{{ engine.bore }}"{%- endcapture -%}
   {%- endif -%}
   {%- if engine.stroke -%}
     {%- capture stroke -%}{{ engine.stroke | fractionize }}"{%- endcapture -%}
-    {%- capture stroke_sort -%}data-sort-val=""{%- endcapture -%}
+    {%- capture stroke_sort -%}data-sort-val="{{ engine.stroke }}"{%- endcapture -%}
   {%- endif -%}
   {%- capture location -%}{{ engine.location | abbr }}{%- endcapture -%}
   <tr>
