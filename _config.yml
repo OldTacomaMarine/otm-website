@@ -9,4 +9,5 @@ defaults:
       type: engines
     values:
       layout: engine
-
+sass:
+  sourcemap: development
