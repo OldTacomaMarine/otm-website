@@ -7,6 +7,16 @@ import yaml
 import yamlordereddictloader
 import collections
 
+original_dir = "/Users/anna/Downloads/otm_ftp_dump/www/"
+
+def new_soup(fp):
+  # Preprocess
+  text = fp.read();
+  # Replace malformed HTML entities
+  text = re.sub(r'&Amp;|&ap;', '&amp;', text)
+
+  return BeautifulSoup(text, "html.parser")
+
 def pairwise(iterable):
   a = iter(iterable)
   return izip(a, a)
@@ -20,7 +30,7 @@ def nonize(h):
       if not v or (isinstance(v, basestring) and v.lower() == "unknown"):
         h[k] = None
 
-
+# Copies data from h2 to h1 if there is no h1 value
 def diff(h1, h2, k):
   if not h1[k] and h2[k]:
     h1[k] = h2[k]
@@ -71,6 +81,14 @@ def parse_num(s):
 
   return int(s)
 
+def validate_img_exists(category, filename):
+  if not filename or filename == "../images/ina.jpg":
+    return False
+
+  path = "../images/{}/{}".format(category, os.path.basename(filename))
+
+  return os.path.exists(path)
+
 def convert(soup, category, path, name):
   soup.title.extract()
 
@@ -97,9 +115,9 @@ def convert(soup, category, path, name):
     img = content.img["src"]
     content.img.extract()
 
-  if img == "../images/ina.jpg":
+  if not validate_img_exists(directory, img):
     img = None
-  if img_big == "../images/ina.jpg":
+  if not validate_img_exists(directory, img_big):
     img_big = None
 
   model = None
@@ -381,14 +399,22 @@ def convert_index(soup, category):
 
 
 for directory in ["atlas", "enterprise", "fairbanks", "washington"]:
+  input_dir = directory
+  output_dir = os.path.join("output", directory)
+
+  if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
   all_data = []
 
+  # Extract data from the index for this engine category
   idx_data = None
-  with open(os.path.join(directory, "index.html")) as fp:
-    soup = BeautifulSoup(fp, "html.parser")
+  with open(os.path.join(input_dir, "index.html")) as fp:
+    soup = new_soup(fp)
     idx_data = convert_index(soup, directory)
 
-  for filename in os.listdir(directory):
+  # Extract data from each individual engine page for this engine category
+  for filename in os.listdir(input_dir):
     name, ext = os.path.splitext(filename)
 
     if filename == "index.html" or ext != ".html":
@@ -397,7 +423,7 @@ for directory in ["atlas", "enterprise", "fairbanks", "washington"]:
     path = os.path.join(directory, filename)
 
     with open(path) as fp:
-      soup = BeautifulSoup(fp, "html.parser")
+      soup = new_soup(fp)
       data = convert(soup, directory, path, name)
       all_data.append(data)
 
@@ -491,7 +517,7 @@ for directory in ["atlas", "enterprise", "fairbanks", "washington"]:
       if data_out["images"]["small"]:
         print os.path.basename(data_out["images"]["small"])
 
-    with open(os.path.join("output", directory, data_out["id"] + ".html"), "w") as f:
+    with open(os.path.join(output_dir, data_out["id"] + ".html"), "w") as f:
       f.write("---\n")
       yaml.dump(data_out, f, Dumper=yamlordereddictloader.SafeDumper, default_flow_style=False, width=999999)
       f.write("---\n")
