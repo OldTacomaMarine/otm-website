@@ -1,0 +1,31 @@
+#manual-index {
+  h1 {
+    text-align: center;
+  }
+
+  .manuals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .manual {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #CCCCCC;
+
+    .cover {
+      flex-shrink: 0;
+      width: 100px;
+      margin-right: 1rem;
+    }
+
+    .info h2 {
+      margin: 0 0 0.2rem 0;
+      font-size: 1.1rem;
+    }
+  }
+}

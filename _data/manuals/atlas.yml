@@ -1,0 +1,70 @@
+- id: AI_instructions_4-cycle-32A-2
+  title: Instruction book No. 32A-2
+  description: Instruction book No. 32A-2 for installing and operating Atlas-imperial four cycle mechanical injection diesel engines. 65 pages.
+  models: []
+
+- id: AI_instructions_4-cycle_27-12
+  title: Instruction Book No. 27-12
+  description: Instruction Book No. 27-12 for Installing and Operating Atlas-Imperial Four Cycle Mechanical Injection Diesel Engines. 70 pages.
+  models: []
+
+- id: AI_instructions_6EN-668
+  title: Atlas Diesel 6-EN-668 Instructions 18(S)
+  description: Instructions 18(S) Atlas-Imperial 6EN668. 49 pages.
+  models: [6EN668]
+
+- id: AI_instructions_6HM464
+  title: Instructions for Model 6HM464
+  description: Operators Manual TC 1386 Atlas Imperial Marine Diesel Engine Model 6HM464 - 120 Horsepower 6-cylinder 7-1/2x10-1/2 Direct Reversible. 194 pages.
+  models: [6HM464]
+
+- id: AI_instructions_9x10.5
+  title: Instructions for 9"x10-1/2" Engines
+  description: Operator's Instruction Book for engines with 9" bore, 10-1/2" stroke, 4-5-6-8 cylinders. 59 pages.
+  models: [4HM528]
+
+- id: AI_parts-catalog_45-M5X-8
+  title: Parts Catalog for Model 45-M5X-8
+  description: Parts Catalog for Atlas-Imperial 9" bore, 10-1/2" stroke, 8 cyl marine model 45-M5X-8. 276 pages.
+  models: [45M5X8]
+
+- id: AI_parts-catalog_4HM-282
+  title: Parts Catalog for Model 4HM-282
+  description: Parts Catalog for Atlas-Imperial 20312. 6-1/2 bore , 8-1/2 stroke, 4-cyl marine model 4HM-282. 163 pages.
+  models: [4HM282]
+
+- id: AI_parts-catalog_4HM763
+  title: Parts Catalog for Model 4HM763
+  description: Parts Catalog for Atlas-Imperial 12719. 9" bore, 12" stroke, 6-cyl marine model 4HM763. 152 pages.
+  models: [4HM763]
+
+- id: AI_parts-catalog_6HM3358
+  title: Parts Catalog for Model 6HM3358
+  description: Parts Catalog for Atlas-Imperial 6HM3358. 15" bore, 19" stroke, 6-cyl marine model. 186 pages.
+  models: [6HM3358]
+
+- id: AI_parts-catalog_6HM763
+  title: Parts Catalog for Model 6HM763
+  description: Parts Catalog for Atlas-Imperial 12966. 9" bore, 12" stroke, 6-cyl marine model 6HM763. 149 pages.
+  models: [6HM763]
+
+- id: AI_parts-catalog_EN668
+  title: Parts Catalog for Model EN-668
+  description: Parts Catalog for Atlas-Imperial USMC tugboats. 6" bore, 9" stroke, 6-cyl stationary model EN-668. 159 pages.
+  models: [6EN668]
+
+- id: AI_technical-manual_45M5X8_armytug
+  title: Technical Manual for Model 45M5X8
+  description: Organizational Maintenance Repair Parts & Special Tool List for Army Harbor Tug, 600 HP, Steel, 65 Ft. Model 45M5X8 Atlas-Imperial diesel engine. 281 pages.
+  models: [45M5X8]
+
+- id: AI_instructions_6HM1558
+  title: Instructions for Model 6HM1558
+  description: Operators manual for Atlas-Imperial 6HM1558. 320 HP, 6-cyl, 11-1/2"x15 direct reversible. 201 pages.
+  models: [6HM1158]
+
+- id: atlas_two-cycle
+  title: Two Cyle Stationary Diesel Catalog
+  description: Catalog for stationary two cycle Atlas-Imperial diesel engines. 22 pages
+  models: []
+

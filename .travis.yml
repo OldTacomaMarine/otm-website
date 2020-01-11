@@ -4,5 +4,5 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - JEKYLL_ENV=production
-script: bundle exec jekyll build && bundle exec htmlproofer ./_site && bundle exec ruby deploy.rb
+script: bundle exec rake deploy
 sudo: false

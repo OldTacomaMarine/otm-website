@@ -7,6 +7,8 @@ pageType: engine-index
 
 {{ content }}
 
+<a href="manuals.html">All {{ page.title }} manuals.</a>
+
 <h3>Known Remaining engines</h3>
 
 <div class="table-info">
@@ -51,8 +53,8 @@ pageType: engine-index
     <td class="model">{{ engine.model }}</td>
     <td class="serial">{{ engine.serial }}</td>
     <td class="engine{{ display_prior }}"><a href="{{ engine.url }}">{{ engine_title }}</a></td>
-    <td class="bore"{{ bore_sort }}>{{ bore }}</td>
-    <td class="stroke"{{ stroke_sort }}>{{ stroke }}</td>
+    <td class="bore" {{ bore_sort }}>{{ bore }}</td>
+    <td class="stroke" {{ stroke_sort }}>{{ stroke }}</td>
     <td class="cylinders">{{ engine.cylinders }}</td>
     <td class="hp">{{ engine.hp }}</td>
     <td class="rpm">{{ engine.rpm }}</td>

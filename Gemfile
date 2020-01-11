@@ -6,4 +6,5 @@ gem "aws-sdk-s3", "~> 1"
 gem "aws-sdk-cloudfront", "~> 1"
 gem "mime-types", "~> 3"
 gem "html-proofer"
-
+gem "rake"
+gem "rainbow"

@@ -1,13 +1,28 @@
 collections:
   engines:
     output: true
-exclude: [vendor, Gemfile*, README.md, deploy.rb, old_engines, images/unused]
+exclude: [vendor, Gemfile*, README.md, deploy.rb, old_engines, images/unused, Rakefile, rakelib]
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: engines
     values:
       layout: engine
+  - scope:
+      path: "engines/atlas"
+    values:
+      engine_type: atlas
+  - scope:
+      path: "engines/enterprise"
+    values:
+      engine_type: enterprise
+  - scope:
+      path: "engines/fairbanks"
+    values:
+      engine_type: fairbanks
+  - scope:
+      path: "engines/washington"
+    values:
+      engine_type: washington
 sass:
   sourcemap: development
