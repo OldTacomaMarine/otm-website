@@ -146,8 +146,13 @@ def download(bucket_name, existing_files)
       path.parent.mkpath
 
       obj.get(response_target: path.to_s)
+
+      download_hash = Digest::MD5.file(path).hexdigest
+
+      if download_hash != obj.object.metadata["hash"]
+        raise "File corrupted on download: " + path
+      end
     end
   end
 end
-
 

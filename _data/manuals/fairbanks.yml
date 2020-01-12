@@ -1,0 +1,81 @@
+- id: FM_operators-manual_type-C-O_2352B
+  title: Starting & Operating Type "C-O" Marine Engines
+  description: Intructions for Starting & Operating Fairbanks-Morse Type "C-O" Heavy-Duty Marine Engines.  Instructions 2352B.  11 pages.
+  models: []
+
+- id: FM_operators-manual_type-C-O_2352D
+  title: Starting & Operating Type "C-O" Marine Engines
+  description: Intructions for Starting & Operating Fairbanks-Morse Type "C-O" Heavy-Duty Marine Engines.  Instructions 2352D.  10 pages.
+  models: []
+
+- id: FM_operators-manual_type-C-O_2514
+  title: Starting & Operating Type "C-O", 150 & 200 HP
+  description: Intructions for Installing & Operating Fairbanks-Morse Type "C-O" Heavy-Duty Marine Oil Engines, 150 and 200 H.P. Direct-Reversible.  Instructions 2514.  21 pages.
+  models: []
+
+- id: FM_operators-manual_type-C-O_2519
+  title: Starting & Operating Type "C-O", 30, 45, & 60 HP
+  description: Intructions for Installing & Operating Fairbanks-Morse Type "C-O" Heavy-Duty Marine Oil Engines, 30, 45, and 60 H.P. Instructions 2519.  18 pages.
+  models: []
+
+- id: FM_operators-manual_type-C-O_2519A
+  title: Starting & Operating Type "C-O", 30, 45, & 60 HP
+  description: Intructions for Installing & Operating Fairbanks-Morse Type "C-O" Heavy-Duty Marine Oil Engines, 30, 45, and 60 H.P. Instructions 2519A.  16 pages.
+  models: []
+
+- id: FM_operators-manual_type-C-O_2600
+  title: Starting & Operating Type "C-O", 75 & 100 HP
+  description: Intructions for Installing & Operating Fairbanks-Morse Type "C-O" Heavy-Duty Marine Oil Engines, 75 and 100 H.P. Instructions 2600.  16 pages.
+  models: []
+
+- id: FM_operators-manual_type-Y_2450D
+  title: Type "Y" Vertical Oil Engines
+  description: Intructions for Setting Up & Operating Fairbanks-Morse Type "Y" Vertical Oil Engines.  Instructions 2450D.  20 pages.
+  models: []
+
+- id: FM_32-14x17_dual-fuel-conversion
+  title: Dual Fuel Gas Conversion for Model 32-14x17
+  description: Dual Fuel Gas Conversion for Fairbanks-Morse Model 32-14x17.  Instructions 3047-A.  19 pages.
+  models: []
+
+- id: FM_32A12-32A14_operating-instructions
+  title: Stationary Diesel Engines Modesl 32A & 32B
+  description: Fairbanks-Morse Stationary Diesel Engines Modesl 32A-12 And 32A-14; Models 32B-12 and 32B-14.  Instructions No. 3200B. 99 pages.
+  models: []
+
+- id: FM_32E12-32E14_instructions
+  title: Stationary Diesel Engines Models 32E-12 & 32E-14
+  description: Fairbanks-Morse Stationary diesel engines Models 32E12 and 32E14.  Instructions No 3200E. 67 pages.
+  models: []
+
+- id: FM_32E_stationary_bulletin
+  title: Model 32-E Diesels for Heavy-Duty Stationary Service
+  description: Model 32-E Diesels for Heavy-Duty Stationary Service.  Bulletin 3200E2.  24 pages.
+  models: []
+
+- id: FM_differential-fuel-injection-nozzels
+  title: Types C and CWD Differential Fuel Injection Nozzels
+  description: Fairbanks-Morse Types C and CWD Differential Fuel Injection Nozzels.  Instructions 2769H.  18 pages.
+  models: []
+
+- id: FM_woodward-governors
+  title: Woodward type IC Governors
+  description: Woodward type IC Governors.  Bulletin 02002A.  12 pages.
+  models: []
+
+- id: FM_madison-kipp-lubricator
+  title: Model 50 Madison-Kipp Lubricator
+  description: Instruction Book & Repair Parts List Model 50 Madison-Kipp Lubricator.  Bulletin L-3011.  February 12, 1957. 15 pages.
+  models: []
+
+- id: FM_manuals_other
+  title: Oddball Fairbanks-Morse Manuals
+  description: Instructions for Fairbanks-Morse Types E and G gasoline engines, Type N Horizontal gas engines with hit and miss governor, Type T small vertical gasoline engines, Type Z oil engines, and Type Y Horizontal oil engines.  Also includes instructions for the Eclipse Pumper and the Sumter Plugoscillator, used with type Z oil engines.  98 pages.
+  models: []
+
+- id: FM_33E14_37E14
+  title: Models 33E14 & 37E14 manual
+  description: Manual and diagrams for models 33E14 & 37E14.
+  models: []
+
+

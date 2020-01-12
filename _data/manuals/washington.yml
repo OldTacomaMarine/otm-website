@@ -1,0 +1,40 @@
+- id: WIW_instruction-manual
+  title: Washington Diesel Engines Instruction Manual
+  description: Washington Diesel Engines Instruction Manual Number 30-32-49. 57 pages.
+  models: []
+
+- id: WIW_care-and-operation-manual
+  title: Instructions for Installation, Care & Operation
+  description: Instructions for Installation, Care and; Operation of Marine and Stationary Washington Diesel Engines. 50 pages.
+  models: []
+
+- id: WIW_lubrication-manual
+  title: Lubrication Instruction Manual
+  description: Stationary and Marine Diesel Engines Lubrication Instruction Manual. 15 pages.
+  models: []
+
+- id: WIW_diesel-catalog
+  title: Catalog of Marine & Stationary Diesels
+  description: Dependable Diesel Power for both Marine and Stationary Use from 90 to 1500 BHP. 30 pages.
+  models: []
+
+- id: WIW_info
+  title: Washington Iron Works
+  description: Full Service Engineering & Drafting, Foundry, Machine Shop, Fabrication Shop, Assembly, Since 1882. 10 pages.
+  models: []
+
+- id: WIW_seachest-history
+  title: The Washington-Estep Engine
+  description: 
+  models: []
+
+- id: WIW_drawing-number-suffix-list
+  title: Drawing Number Suffix List
+  description: Key to technical drawings numbers suffixes. 7 pages.
+  models: []
+
+- id: WIW_keylist_6cyl-10x13.5
+  title: Keylist for 6-Cylinder 10 x 13-1/2 engine
+  description: List of technical drawings of components for 6-Cylinder 10 x 13-1/2 engine. 35 pages.
+  models: []
+

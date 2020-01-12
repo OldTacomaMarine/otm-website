@@ -6,6 +6,6 @@ _site
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
-old_engines/output/
-images/
-manuals/
+/old_engines/output/
+/images/
+/manuals/
