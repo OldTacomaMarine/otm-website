@@ -11,6 +11,7 @@ using Rainbow
 
 SITE_S3_BUCKET = "oldtacomamarine.com"
 IMG_S3_BUCKET = "img.#{SITE_S3_BUCKET}"
+S3_REGION = "us-west-2"
 
 task :fetch_media do
   download(IMG_S3_BUCKET, IMG_FILES)
@@ -35,7 +36,8 @@ end
 task :invalidate_cdn, %w[dryrun] do |t, args|
   dryrun = (args.dryrun != "false")
 
-  cf = Aws::CloudFront::Client.new
+  # CloudFront is global, but the client still needs a region for some reason
+  cf = Aws::CloudFront::Client.new(region: "us-east-1")
 
   # Find the CloudFront distribution that uses the SITE_S3_BUCKET as its origin
   distributions = cf.list_distributions.flat_map { |r| r.distribution_list.items }
@@ -53,7 +55,6 @@ task :invalidate_cdn, %w[dryrun] do |t, args|
     dryrun_puts(dryrun, "Would have invalidated CloudFront: #{invalidation}")
   else
     puts "Invalidating CloudFront distribution: #{distribution.id}"
-    cf = Aws::CloudFront::Client.new
     cf.create_invalidation(invalidation)
   end
 end
@@ -71,7 +72,7 @@ def upload(bucket_name, build_dir, files, dryrun: true)
   paths = files.map {|f| Pathname.new(f) }
   paths.select!(&:file?)
 
-  s3 = Aws::S3::Resource.new
+  s3 = Aws::S3::Resource.new(region: S3_REGION)
   bucket = s3.bucket(bucket_name)
 
   # Find all files recursively within the build output directory
@@ -127,7 +128,7 @@ def download(bucket_name, existing_files)
   paths = existing_files.map {|f| Pathname.new(f) }
   paths.select!(&:file?)
 
-  s3 = Aws::S3::Resource.new
+  s3 = Aws::S3::Resource.new(region: S3_REGION)
   bucket = s3.bucket(bucket_name)
 
   objects = bucket.objects

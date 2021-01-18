@@ -8,6 +8,11 @@
   description: This manual was assembled for the Enterprise DMQ-38 diesel engine and includes a section on the Elliott-Buchi Turbocharger. 159 pages.
   models: [DMQ-38]
 
+- id: E_DMQ-38_wartime
+  title: War Department Technical Manual DMQ-36 and DMQ-38
+  description: Enterprise diesel engine instruction manual for Models DMQ-36 and DMQ-38 for the US War Department. 185 pages.
+  models: [DMQ-36, DMQ-38]
+
 - id: E_instructions_DMG-36
   title: Instruction Manual Model DMG-36
   description: Enterprise diesel engine instruction manual for Model DMG-36, serial number 56051 for tug Peter Foss, Foss Launch & Tug. 187 pages.
