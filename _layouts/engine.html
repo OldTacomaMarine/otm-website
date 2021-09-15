@@ -25,7 +25,7 @@ pageType: engine-info
   <tr><th>Cylinders:</th><td>{{ page.cylinders }}</td></tr>
   <tr><th>Horsepower:</th><td>{{ page.hp }}</td></tr>
   <tr><th>RPM:</th><td>{{ page.rpm }}</td></tr>
-  <tr><th>Current Owner:</th><td>{{ page.owner }}</td></tr>
+  <tr><th>Current Owner:</th><td>{{ page.owner }}{% if page.owner_link %} (<a href="{{ page.owner_link }}">website</a>){%- endif -%}</td></tr>
   <tr><th>Current Location:</th><td>{{ page.location }}</td></tr>
   <tr><th>Current Condition:</th><td>{{ page.condition }}</td></tr>
 </table>
