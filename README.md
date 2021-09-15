@@ -1,5 +1,3 @@
-[![BuildStatus](https://travis-ci.org/OldTacomaMarine/otm-website.svg)](https://travis-ci.org/OldTacomaMarine/otm-website)
-
 Run local test server: `bundle exec jekyll server`
 
 ## Adding Manuals

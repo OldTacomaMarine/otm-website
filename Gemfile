@@ -8,3 +8,5 @@ gem "mime-types", "~> 3"
 gem "html-proofer"
 gem "rake"
 gem "rainbow"
+
+gem "webrick", "~> 1.7"
