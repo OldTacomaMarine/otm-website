@@ -17,7 +17,7 @@ task :fetch_media do
   download(IMG_S3_BUCKET, IMG_FILES)
 end
 
-task :deploy, %w[dryrun] => %w[clean test] do |t, args|
+task :deploy, %w[dryrun] => %w[clean build] do |t, args|
   dryrun = (args.dryrun != "false")
 
   dryrun_puts(dryrun, "Running in dryrun mode, will not modify remote files")
