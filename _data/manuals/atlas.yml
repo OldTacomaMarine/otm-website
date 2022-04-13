@@ -13,9 +13,15 @@
   description: Instructions 18(S) Atlas-Imperial 6EN668. 49 pages.
   models: [6EN668]
 
+- id: AI_instructions_6HM2124
+  has_large: true
+  title: 6HM2124 Instructions and Parts Catalog
+  description: Instructions and parts catalog for marine engine model 6HM2124 with serial number 12136. 13" bore, 16" stroke, 6-cylinders. 202 pages.
+  models: [6HM2124]
+
 - id: AI_instructions_6HM464
   title: Instructions for Model 6HM464
-  description: Operators Manual TC 1386 Atlas Imperial Marine Diesel Engine Model 6HM464 - 120 Horsepower 6-cylinder 7-1/2x10-1/2 Direct Reversible. 194 pages.
+  description: Operator's Manual TC 1386 Atlas Imperial Marine Diesel Engine Model 6HM464 - 120 Horsepower 6-cylinder 7-1/2x10-1/2 Direct Reversible. 194 pages.
   models: [6HM464]
 
 - id: AI_instructions_9x10.5

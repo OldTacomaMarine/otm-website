@@ -44,8 +44,16 @@
     }
   }
 
+  .engine {
+    min-width: 10rem;
+  }
+
   .vessel {
     font-style: italic;
+  }
+
+  .owner {
+    min-width: 10rem;
   }
 
   .display-prior {

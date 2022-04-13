@@ -1,3 +1,5 @@
+@import "mixins";
+
 #manual-index {
   h1 {
     text-align: center;
@@ -14,6 +16,11 @@
     flex-direction: row;
     align-items: center;
     width: 40rem;
+
+    @include mobile {
+      width: 100%;
+    }
+
     padding: 1rem 0;
     border-bottom: 1px solid #CCCCCC;
 
