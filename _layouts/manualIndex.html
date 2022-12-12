@@ -15,7 +15,7 @@ pageType: manual-index
   <div class="info">
     <h2>{{ manual.title }}</h2>
     <p>{{ manual.description}}</p>
-    <p class="source"><a href="{{ small_url }}">Small</a> ({{ small_url | file_size }})</p>
+    <p class="source"><a href="{{ small_url }}">Download</a> ({{ small_url | file_size }})</p>
     {% if manual.has_large -%}<p class="source"><a href="{{ large_url }}">Large</a> ({{ large_url | file_size }})</p>{%- endif -%}
   </div>
 </div>

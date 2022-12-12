@@ -8,6 +8,11 @@
   description: Instruction Book No. 27-12 for Installing and Operating Atlas-Imperial Four Cycle Mechanical Injection Diesel Engines. 70 pages.
   models: []
 
+- id: AI_instructions_Clyde_27-12
+  title: Instruction Book No. 27-12 (Clyde's)
+  description: Instruction Book No. 27-12 for Installing and Operating Atlas-Imperial Four Cycle Mechanical Injection Diesel Engines. 73 pages.
+  models: []
+
 - id: AI_instructions_6EN-668
   title: Atlas Diesel 6-EN-668 Instructions 18(S)
   description: Instructions 18(S) Atlas-Imperial 6EN668. 49 pages.
@@ -44,6 +49,11 @@
   description: Parts Catalog for Atlas-Imperial 12719. 9" bore, 12" stroke, 6-cyl marine model 4HM763. 152 pages.
   models: [4HM763]
 
+- id: AI_instructions_4HM763_8251
+  title: Instructions for Model 4HM763
+  description: Instructions and Parts Catalog for Atlas-Imperial 12719 and handwritten "#8251". 9" bore, 12" stroke, 6-cyl marine model 4HM763. 193 pages.
+  models: [4HM763]
+
 - id: AI_parts-catalog_6HM3358
   title: Parts Catalog for Model 6HM3358
   description: Parts Catalog for Atlas-Imperial 6HM3358. 15" bore, 19" stroke, 6-cyl marine model. 186 pages.
@@ -71,6 +81,11 @@
 
 - id: atlas_two-cycle
   title: Two Cyle Stationary Diesel Catalog
-  description: Catalog for stationary two cycle Atlas-Imperial diesel engines. 22 pages
+  description: Catalog for stationary two cycle Atlas-Imperial diesel engines. 22 pages.
+  models: []
+
+- id: AI_instructions_install
+  title: Instruction Book for Installing and Operating
+  description: Instruction Book for Installing and Operating Atlas-Imperial Mechanical Injection Diesel Engines. 29 pages.
   models: []
 
