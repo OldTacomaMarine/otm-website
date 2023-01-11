@@ -15,6 +15,13 @@ pageType: engine-info
   {%- else -%}
   <img src="{{ page.images.small }}" alt="{{ page.title }}">
   {%- endif -%}
+{%- endif -%}
+{%- if page.images.vessel_small -%}
+  {%- if page.images.vessel_big -%}
+  <a href="{{ page.images.vessel_big }}"><img src="{{ page.images.vessel_small }}" alt="{{ page.title }}"></a>
+  {%- else -%}
+  <img src="{{ page.images.vessel_small }}" alt="{{ page.title }}">
+  {%- endif -%}
 {%- endif %}
 
 <table>
