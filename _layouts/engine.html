@@ -37,6 +37,7 @@ pageType: engine-info
   <tr><th>Current Condition:</th><td>{{ page.condition }}</td></tr>
 </table>
 
+{% if content != "" -%}
 <h2>Engine History</h2>
-{{ content }}
-
+{{ content | strip }}
+{%- endif -%}
