@@ -1,6 +1,12 @@
 'use strict'
 document.addEventListener('DOMContentLoaded', function() {
 
+const ASCENDING = 1;
+const DESCENDING = -ASCENDING;
+const INITIAL_SORT_COL = 'Bore';
+const DEFAULT_NUM_SORT_DIR = DESCENDING;
+const DEFAULT_SORT_DIR = ASCENDING;
+
 const table = document.querySelector('table.sortable');
 
 if (!table) {
@@ -14,16 +20,19 @@ const descArrow = '<span class="sort-arrow">&darr;</span>';
 const ascArrow = '<span class="sort-arrow">&uarr;</span>';
 
 let currSortCol = null;
-let order = -1; // 1=asc, -1=desc
+let order = null;
 
+// Add an onclick handler to each table header
 for (let i = 0; i < headers.length; i++) {
   const isNum = headers[i].classList.contains('numeric');
   headers[i].onclick = function() { sortCol(i, isNum); };
 
-  if (i == 0) {
-    headers[0].onclick()
+  // Sort the initially sorted column
+  if (headers[i].textContent === INITIAL_SORT_COL) {
+    sortCol(i, isNum);
   }
 }
+
 
 function getValue(row, col, isNum) {
   const el = row.querySelector('td:nth-of-type(' + (col + 1) + ')');
@@ -41,14 +50,24 @@ function sortCol(col, isNum) {
     rows[i].lastIndex = i;
   }
 
-  order = ((col == currSortCol) ? -order : -1);
+  // If this column is not the previously sorted column, set the sort
+  // direction to be the default according to its data type.
+  if (col != currSortCol) {
+    order = (isNum ? DEFAULT_NUM_SORT_DIR : DEFAULT_SORT_DIR);
+  } else {
+    // This column was already sorted, sort in reverse
+    order = -order;
+  }
 
+  // Remove the sort arrow from the old sorted column (if any).
+  // If this column was the old one, we still do this to change arrow direction.
   if (currSortCol != null) {
     const arr = headers[currSortCol].querySelector('.sort-arrow');
     headers[currSortCol].removeChild(arr);
   }
 
-  headers[col].innerHTML += (order < 0 ? descArrow : ascArrow);
+  // Add the sort direction arrow to this column
+  headers[col].innerHTML += (order == DESCENDING ? descArrow : ascArrow);
 
   rows.sort(function(rowA, rowB) {
     // Keep the header row first
@@ -61,7 +80,7 @@ function sortCol(col, isNum) {
     const a = getValue(rowA, col, isNum);
     const b = getValue(rowB, col, isNum);
 
-    // Order such that empty strings always come last
+    // Order such that empty strings always come last regardless of sort direction
     if (a === b) {
       return rowA.lastIndex - rowB.lastIndex;
     } else if (!a) {
