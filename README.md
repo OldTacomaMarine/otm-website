@@ -1,5 +1,17 @@
 Run local test server: `bundle exec jekyll serve`
 
+## Images
+
+### Creating Small Image from Big
+
+The small images shown on an engine page are 360 pixels high, unless the original is less than that.
+
+`cd images/atlas`
+
+`ls -1 *_big.(jpg|png) | xargs -t -I '{}' magick '{}' -colorspace RGB -set filename:original %t -filter lanczos -set filename:original %t -resize "x360>" -unsharp 0x0.75+0.75+0.008 -quality 90 -colorspace sRGB -strip "%[filename:original]_small.jpg"`
+
+`zmv -f '(*)_big_small.jpg' '$1.jpg'`
+
 ## Manuals
 
 ## Adding Manuals
@@ -103,3 +115,4 @@ ls -1 | xargs -t -I '{}' magick '{}[0]' -colorspace RGB -set filename:original %
 zopflipng --iterations=500 --filters=01234mepb --lossy_8bit --lossy_transparent --prefix=zopfli_ *.png
 zmv -f zopfli_*.png '*.png'
 ```
+
