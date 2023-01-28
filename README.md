@@ -1,4 +1,4 @@
-Run local test server: `bundle exec jekyll server`
+Run local test server: `bundle exec jekyll serve`
 
 ## Manuals
 
