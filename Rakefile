@@ -23,13 +23,7 @@ end
 task test: %w[build] do
   HTMLProofer.check_directory(
     BUILD_DIR,
-    check_html: true,
-    validation: {
-      report_invalid_tags: true,
-      report_missing_doctype: true,
-      report_missing_names: true,
-      report_script_embedsr: true
-    },
+    checks: ["Links", "Images", "Scripts", "Favicon"],
     url_ignore: [%r{^/manuals/(atlas|enterprise|fairbanks|washington)/[^/]+\.(pdf|png)$}],
   ).run
 end
