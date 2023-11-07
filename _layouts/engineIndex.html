@@ -9,7 +9,18 @@ pageType: engine-index
 
 <a href="manuals.html">All {{ page.title }} manuals.</a>
 
-<h3>Known Remaining engines</h3>
+{%- assign type_engines = site.engines | where: "type", page.engine_type -%}
+{%- assign subtypes = type_engines | map: "subtype" | uniq | nilsort -%}
+
+{%- for subtype in subtypes -%}
+{%- case subtype -%}
+  {%- when nil -%}
+    <h3>Known Remaining Engines</h3>
+  {%- when "transition" -%}
+    <h3>Enterprise Transistion Period Engines</h3>
+{%- endcase -%}
+
+{%- assign engines = type_engines | where: "subtype", subtype -%}
 
 <div class="table-info">
   Click on the headings to sort table by column. Names
@@ -32,7 +43,6 @@ pageType: engine-index
     <th>Currently</th>
     <th>Location</th>
   </tr>
-  {%- assign engines = site.engines | where: "type", page.engine_type -%}
   {%- for engine in engines -%}
   {%- capture display_prior -%}{% if engine.is_display %} display-prior{% endif %}{%- endcapture -%}
   {%- assign engine_title = engine.title -%}
@@ -66,3 +76,4 @@ pageType: engine-index
   {%- endfor -%}
 </table>
 
+{%- endfor -%}
