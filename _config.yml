@@ -1,3 +1,4 @@
+title: Old Tacoma Marine
 collections:
   engines:
     output: true
@@ -12,17 +13,25 @@ defaults:
       path: "engines/atlas"
     values:
       engine_type: atlas
+      title: Atlas-Imperial Engine Co
+      mapcolor: ffaa7239
   - scope:
       path: "engines/enterprise"
     values:
       engine_type: enterprise
+      title: Enterprise Foundry Co
+      mapcolor: ffaaa239
   - scope:
       path: "engines/fairbanks"
     values:
       engine_type: fairbanks
+      title: Fairbanks-Morse
+      mapcolor: ff4e2c73
   - scope:
       path: "engines/washington"
     values:
       engine_type: washington
+      title: Washington Iron Works
+      mapcolor: ff265b6a
 sass:
   sourcemap: development

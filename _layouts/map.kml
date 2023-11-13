@@ -1,0 +1,63 @@
+{%- assign engines = site.engines | where: "type", page.engine_type | sort: "title" -%}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>{{ page.title }}</name>
+    <Style id="icon-1899-0F9D58-nodesc-normal">
+      <IconStyle>
+	<color>{{ page.mapcolor }}</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0F9D58-nodesc-highlight">
+      <IconStyle>
+	<color>{{ page.mapcolor }}</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0F9D58-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+{%- for engine in engines -%}
+{% if engine.lat and engine.lon %}
+    <Placemark>
+      <name>{{ engine.title }}</name>
+      <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          {{ engine.lat }},{{ engine.lon }},0
+        </coordinates>
+      </Point>
+    </Placemark>
+  {%- endif -%}
+{%- endfor %}
+  </Document>
+</kml>
