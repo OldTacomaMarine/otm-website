@@ -1,10 +1,11 @@
 {%- assign engines = site.engines | where: "type", page.engine_type | sort: "title" -%}
+{%- capture styleid %}icon-{{ page.engine_type }}-nodesc{% endcapture -%}
 
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>{{ page.title }}</name>
-    <Style id="icon-1899-0F9D58-nodesc-normal">
+    <Style id="{{ styleid }}-normal">
       <IconStyle>
 	<color>{{ page.mapcolor }}</color>
         <scale>1</scale>
@@ -20,7 +21,7 @@
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <Style id="icon-1899-0F9D58-nodesc-highlight">
+    <Style id="{{ styleid }}-highlight">
       <IconStyle>
 	<color>{{ page.mapcolor }}</color>
         <scale>1</scale>
@@ -36,21 +37,21 @@
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <StyleMap id="icon-1899-0F9D58-nodesc">
+    <StyleMap id="{{ styleid }}">
       <Pair>
         <key>normal</key>
-        <styleUrl>#icon-1899-0F9D58-nodesc-normal</styleUrl>
+        <styleUrl>#{{ styleid }}-normal</styleUrl>
       </Pair>
       <Pair>
         <key>highlight</key>
-        <styleUrl>#icon-1899-0F9D58-nodesc-highlight</styleUrl>
+        <styleUrl>#{{ styleid }}-highlight</styleUrl>
       </Pair>
     </StyleMap>
 {%- for engine in engines -%}
 {% if engine.lat and engine.lon %}
     <Placemark>
-      <name>{{ engine.title }}</name>
-      <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+      <name>{{ engine.title | escape }}</name>
+      <styleUrl>#{{ styleid }}</styleUrl>
       <Point>
         <coordinates>
           {{ engine.lon }},{{ engine.lat }},0

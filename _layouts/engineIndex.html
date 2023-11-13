@@ -20,17 +20,6 @@ pageType: engine-index
     <h3>Enterprise Transistion Period Engines</h3>
 {%- endcase -%}
 
-{%- case page.engine_type -%}
-  {%- when "atlas" -%}
-    {%- assign mapid = "1MDjVG2UKbWQTDb398J6eIgAcbpA" -%}
-  {%- when "enterprise" -%}
-    {%- assign mapid = "1IxrJMO7NgKb8eiD0puprMcTdGq4" -%}
-  {%- when "fairbanks" -%}
-    {%- assign mapid = "1f1TVk6eluwfYenE60b32FKy5ij4" -%}
-  {%- when "washington" -%}
-    {%- assign mapid = "1AWHK1d0caSvGAFHNEBGHqXMTB7Q" -%}
-{%- endcase -%}
-
 {%- assign engines = type_engines | where: "subtype", subtype -%}
 
 <div class="table-info">
@@ -82,7 +71,7 @@ pageType: engine-index
     <td class="owner">{{ engine.owner }}</td>
     <td class="origin">{{ engine.original_use }}</td>
     <td class="current">{{ engine.current_use }}</td>
-    <td class="location">{% if engine.lat and engine.lon %}<a href="https://www.google.com/maps/d/u/0/viewer?ll={{ engine.lat }}%2C{{ engine.lon }}&z=13&mid={{ mapid }}">{{ location }}</a>{% else %}{{ location }}{% endif %}</td>
+    <td class="location">{% if engine.lat and engine.lon %}<a href="https://www.google.com/maps/d/u/1/viewer?hl=en&mid=17S24xK13fV-agyZY5BExO6cJNF1jd5E&ll={{ engine.lat }}%2C{{ engine.lon }}&z=13">{{ location }}</a>{% else %}{{ location }}{% endif %}</td>
   </tr>
   {%- endfor -%}
 </table>
