@@ -7,7 +7,7 @@
     <name>{{ page.title }}</name>
     <Style id="{{ styleid }}-normal">
       <IconStyle>
-	<color>{{ page.mapcolor }}</color>
+        <color>{{ page.mapcolor }}</color>
         <scale>1</scale>
         <Icon>
           <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
@@ -23,7 +23,7 @@
     </Style>
     <Style id="{{ styleid }}-highlight">
       <IconStyle>
-	<color>{{ page.mapcolor }}</color>
+        <color>{{ page.mapcolor }}</color>
         <scale>1</scale>
         <Icon>
           <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
