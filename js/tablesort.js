@@ -6,33 +6,33 @@ const DESCENDING = -ASCENDING;
 const INITIAL_SORT_COL = 'Bore';
 const DEFAULT_NUM_SORT_DIR = DESCENDING;
 const DEFAULT_SORT_DIR = ASCENDING;
+const DESC_ARROW = '<span class="sort-arrow">&darr;</span>';
+const ASC_ARROW = '<span class="sort-arrow">&uarr;</span>';
 
-const table = document.querySelector('table.sortable');
+const tables = document.querySelectorAll('table.sortable');
 
-if (!table) {
-  return;
+for (let i = 0; i < tables.length; i++) {
+  initTable(tables[i]);
 }
 
-const headers = table.querySelectorAll('th');
-const rows = Array.from(document.querySelectorAll('tr'));
 
-const descArrow = '<span class="sort-arrow">&darr;</span>';
-const ascArrow = '<span class="sort-arrow">&uarr;</span>';
+function initTable(table) {
+  table.currSortCol = null;
+  table.order = null;
 
-let currSortCol = null;
-let order = null;
+  const headers = table.querySelectorAll('th');
 
-// Add an onclick handler to each table header
-for (let i = 0; i < headers.length; i++) {
-  const isNum = headers[i].classList.contains('numeric');
-  headers[i].onclick = function() { sortCol(i, isNum); };
+  // Add an onclick handler to each table header
+  for (let i = 0; i < headers.length; i++) {
+    const isNum = headers[i].classList.contains('numeric');
+    headers[i].onclick = function() { sortCol(table,i, isNum); };
 
-  // Sort the initially sorted column
-  if (headers[i].textContent === INITIAL_SORT_COL) {
-    sortCol(i, isNum);
+    // Sort the initially sorted column
+    if (headers[i].textContent === INITIAL_SORT_COL) {
+      sortCol(table, i, isNum);
+    }
   }
-}
-
+}	
 
 function getValue(row, col, isNum) {
   const el = row.querySelector('td:nth-of-type(' + (col + 1) + ')');
@@ -44,7 +44,10 @@ function getValue(row, col, isNum) {
   return (isNum ? parseFloat(val) : val);
 }
 
-function sortCol(col, isNum) {
+function sortCol(table, col, isNum) {
+  const headers = table.querySelectorAll('th');
+  const rows = Array.from(table.querySelectorAll('tr'));
+
   // Track indexes to make the sort stable and allow sorting on multiple rows
   for (let i = 0; i < rows.length; i++) {
     rows[i].lastIndex = i;
@@ -52,22 +55,22 @@ function sortCol(col, isNum) {
 
   // If this column is not the previously sorted column, set the sort
   // direction to be the default according to its data type.
-  if (col != currSortCol) {
-    order = (isNum ? DEFAULT_NUM_SORT_DIR : DEFAULT_SORT_DIR);
+  if (col != table.currSortCol) {
+    table.order = (isNum ? DEFAULT_NUM_SORT_DIR : DEFAULT_SORT_DIR);
   } else {
     // This column was already sorted, sort in reverse
-    order = -order;
+    table.order = -table.order;
   }
 
   // Remove the sort arrow from the old sorted column (if any).
   // If this column was the old one, we still do this to change arrow direction.
-  if (currSortCol != null) {
-    const arr = headers[currSortCol].querySelector('.sort-arrow');
-    headers[currSortCol].removeChild(arr);
+  if (table.currSortCol != null) {
+    const arr = headers[table.currSortCol].querySelector('.sort-arrow');
+    headers[table.currSortCol].removeChild(arr);
   }
 
   // Add the sort direction arrow to this column
-  headers[col].innerHTML += (order == DESCENDING ? descArrow : ascArrow);
+  headers[col].innerHTML += (table.order == DESCENDING ? DESC_ARROW : ASC_ARROW);
 
   rows.sort(function(rowA, rowB) {
     // Keep the header row first
@@ -88,7 +91,7 @@ function sortCol(col, isNum) {
     } else if (!b) {
       return -1;
     } else {
-      return ((a < b) ? -1 : 1) * order;
+      return ((a < b) ? -1 : 1) * table.order;
     }
   });
 
@@ -100,7 +103,7 @@ function sortCol(col, isNum) {
     table.appendChild(rows[i]);
   }
 
-  currSortCol = col;
+  table.currSortCol = col;
 }
 
 });
