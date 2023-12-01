@@ -4,7 +4,14 @@ module Jekyll
     # This will sort the items putting nil first.
     def nilsort(array)
       return nil unless array
-      return array.sort
+
+      sorted = array.compact.sort
+
+      if array.any?(nil)
+        sorted.prepend(nil)
+      end
+
+      sorted
     end
   end
 end

@@ -16,8 +16,8 @@ pageType: engine-index
 {%- case subtype -%}
   {%- when nil -%}
     <h3>Known Remaining Engines</h3>
-  {%- when "transition" -%}
-    <h3>Enterprise Transistion Period Engines</h3>
+  {%- when "late" -%}
+    <h3>Late Period Engines</h3>
 {%- endcase -%}
 
 {%- assign engines = type_engines | where: "subtype", subtype -%}
