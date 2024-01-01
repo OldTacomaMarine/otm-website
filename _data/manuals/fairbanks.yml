@@ -44,8 +44,14 @@
   models: []
 
 - id: FM_32E12-32E14_instructions
-  title: Stationary Diesel Engines Models 32E-12 & 32E-14
+  title: Stationary Diesel Engines Models 32E-12 & 32E-14 (1954)
   description: Fairbanks-Morse Stationary diesel engines Models 32E12 and 32E14.  Instructions No 3200E. 67 pages.
+  models: []
+
+- id: FM_32E12-32E14_instructions_1940
+  has_large: true
+  title: Stationary Diesel Engines Models 32E-12 & 32E-14 (1940)
+  description: Fairbanks-Morse Stationary diesel engines Models 32E12 and 32E14.  Instructions No 3200E. 92 pages.
   models: []
 
 - id: FM_32E_stationary_bulletin

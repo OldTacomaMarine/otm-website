@@ -91,7 +91,16 @@ fuzz allows colors that are close to the background color to be considered the s
 Scale down to a width of 740, preserving aspect ratio. The unsharping is needed because scaling down causes slight blurriness.
 
 ```
-magick scanned*.png -set filename:original %t -filter lanczos -resize 740 -unsharp 0x0.75+0.75+0.008 -quality 90 -strip "sm_%[filename:original].jpg"
+zmv 'Scan ([0-9][0-9][0-9].png)' '$1' && zmv 'Scan ([0-9][0-9].png)' '0$1' && zmv 'Scan ([0-9].png)' '00$1' && mv Scan.png 000.png
+magick *.png -set filename:original %t -filter lanczos -resize 740 -unsharp 0x0.75+0.75+0.008 -quality 90 -strip "sm_%[filename:original].jpg"
+```
+
+#### Make large version
+
+If a scaled down version is made, create a large version of the manual by just converting PNGs to JPG but keeping the resolution:
+
+```
+magick *.png -set filename:original %t -filter lanczos -quality 90 -strip "lg_%[filename:original].jpg"
 ```
 
 ## Generating Thumbnails

@@ -24,6 +24,12 @@
   description: Instructions and parts catalog for marine engine model 6HM2124 with serial number 12136. 13" bore, 16" stroke, 6-cylinders. 202 pages.
   models: [6HM2124]
 
+- id: AI_instructions_6HM2124_alpo
+  has_large: true
+  title: Alpo's 6HM2124 Instruction Manual
+  description: Instructions for marine engine model 6HM2124 on Alpo. 13" bore, 16" stroke, 6-cylinders. 186 pages.
+  models: [6HM2124]
+
 - id: AI_instructions_6HM464
   title: Instructions for Model 6HM464
   description: Operator's Manual TC 1386 Atlas Imperial Marine Diesel Engine Model 6HM464 - 120 Horsepower 6-cylinder 7-1/2x10-1/2 Direct Reversible. 194 pages.
