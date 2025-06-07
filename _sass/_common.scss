@@ -1,4 +1,4 @@
-@import "mixins";
+@use "mixins";
 
 html, body {
   height: 100%;
@@ -8,12 +8,11 @@ html, body {
 body {
   background: white;
   margin: 0 1em;
+  font-size: 0.9rem;
 
-  @include mobile {
+  @include mixins.mobile {
     margin: 0;
   }
-
-  font-size: 0.9rem;
 }
 
 .logo {
@@ -33,12 +32,11 @@ body {
 main {
   padding: 10px 10px 0 10px;
   border: 1px solid #DDDDDD;
+  border-top: none;
 
-  @include mobile {
+  @include mixins.mobile {
     border: none;
   }
-
-  border-top: none;
 }
 
 #index main {
